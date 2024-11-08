@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Client API</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body onload="loadPastCalls()">
+    <div class="main-container">
+      <div class="item-new-calls">
+        <div class="new-call-container">
+          <div class="method-select">
+            <label>Method:</label>
+            <select id="method">
+              <option value="GET">GET</option>
+            </select>
+          </div>
+          <div>
+            <label>URL:</label>
+            <input id="target-url" class="url-input" />
+          </div>
+          <div>
+          <button onclick="doCall()">Submit</button>
+          <button onclick="clearOutput()">Clear</button>
+        </div>
+          <textarea id="results" cols="100" rows="20"></textarea>
+          <button onclick="save()">Save</button>
+        </div>
+      </div>
+      <div class="item-past-calls">
+        <div class="past-calls-container">
+          <div id="past-calls"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/index.js"></script>
+  </body>
+</html>
